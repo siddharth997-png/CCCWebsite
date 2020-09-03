@@ -328,12 +328,14 @@ nav div{
     color: #8b8b99;
     letter-spacing: 0.5px;
     font-style: italic;
+    padding: 10px;
 }
 
 .member-item h3 {
     font-size: 15px;
     margin-top: 24px;
     margin-bottom: 0px;
+    padding: 10px;
 }
 
 
@@ -343,19 +345,22 @@ nav div{
     font-style: italic;
     letter-spacing: 0.5px;
     margin: 0;
+    padding: 10px;
 }
 
 @media (max-width:900px) {
 
     header{
-        background-position: 47% 0%;
+        background-position: 47% 58%;
+        background-size: 240%;
     }
     .menu-item, .primary{
         display: none;
         padding: 0px;
     }  
     #main-text-wrapper>h1{
-        font-size: 20px;
+        font-size: 25px;
+        letter-spacing: 4px;
     } 
     #main-text-wrapper>p{
         font-size: 13px;
@@ -367,10 +372,10 @@ nav div{
             color: black;
             margin-bottom: -60px;
         } 35% {
-            letter-spacing: 10px;
+            letter-spacing: 5px;
             margin-bottom: -60px;
         } 80% {
-            letter-spacing: 6px;
+            letter-spacing: 2px;
             margin-bottom: -60px;
         }
     
