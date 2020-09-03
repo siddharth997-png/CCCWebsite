@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -14,7 +18,7 @@ header {
     height: 100vh;
     /*background-color: sandybrown;*/
     background-image: url('media/background.jpg');
-    background-position: left;
+    background-position: center;
     background-size: cover;
     /*opacity: 0.7;*/
 
@@ -86,7 +90,7 @@ nav div{
 
 }
 
-#main-text-wrapper h1{
+#main-text-wrapper>h1{
 
     width:100%;
     max-width: 1100px;
@@ -96,16 +100,55 @@ nav div{
     line-height: 1.2;
     text-align: center;
     margin: 0;
+    animation-name: text;
+    animation-duration: 3s;
 
 }
 
 #main-text-wrapper p{
 
+    animation-name: text-appear;
+    animation-duration: 3s;
     width:100%;
-    max-width: 1100px;
+    max-width: 1200px;
     font-size: 15px;
     text-align: center;
     padding-top: 20px;
+    visibility: visible;
+
+}
+
+@keyframes text{
+
+    0%{
+        color: black;
+        margin-bottom: -60px;
+        
+    } 35% {
+        
+        letter-spacing: 15px;
+        margin-bottom: -60px;
+        
+    } 80% {
+        
+        letter-spacing: 4px;
+        margin-bottom: -60px;
+        
+    }
+
+}
+
+@keyframes text-appear{
+
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    } 80%{
+        visibility: visible;
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
 
 }
 
@@ -237,12 +280,14 @@ nav div{
 .item h3 {
     font-size: 24px;
     font-weight: 600;
+    padding: 20px;
 }
 .item p {
     font-size: 16px;
     letter-spacing: 0.5px;
     font-weight: 500;
     color: #8b8b99;
+    padding-bottom: 0px px;
 }
 
 /*----Fourth Section----*/
@@ -302,6 +347,34 @@ nav div{
 
 @media (max-width:900px) {
 
+    header{
+        background-position: 47% 0%;
+    }
+    .menu-item, .primary{
+        display: none;
+        padding: 0px;
+    }  
+    #main-text-wrapper>h1{
+        font-size: 20px;
+    } 
+    #main-text-wrapper>p{
+        font-size: 13px;
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+    @keyframes text{
+        0%{
+            color: black;
+            margin-bottom: -60px;
+        } 35% {
+            letter-spacing: 9px;
+            margin-bottom: -60px;
+        } 80% {
+            letter-spacing: 4px;
+            margin-bottom: -60px;
+        }
+    
+    }
     #second-section{
         width: 100%;
         flex-direction: column;
@@ -311,11 +384,36 @@ nav div{
     }
     #item-wrapper{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .item{
         width:90%; 
         max-width: 700px;
     }
+    .heading{
+        font-size: 35px;
+    }
+    .after-heading{
+        
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        text-align: center;
+        
+    }
+    .item>h3,.item>p{
+        padding: 10px;
+    }
+    #team-wrapper{
+        flex-direction: column;
+    }
+    .team-item{
+        width: 80%;
+    }
+    .team-item>p {
+        padding: 10px;
+    } 
 
 }
 
