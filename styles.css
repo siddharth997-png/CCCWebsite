@@ -422,37 +422,46 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     color: white;
 
 }
-@media(max-width:1024px) and (min-width:1000px){
+@media(max-width:1283px) and (min-width:1000px){
     #first-section{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
     }
     #main-text-wrapper{
         align-self: center;
     }
     #main-text-wrapper>h1{
-        font-size: 70px;
+        font-size: 80px;
     }
     #main-text-wrapper>p{
-        font-size: 40px;
+        font-size: 30px;
         max-width: 700px;
-        margin-bottom: 200px;
     }
     #first-sec-img{
-        width: 650px;
+        width: 450px;
         margin: 50px;
+    }
+    .motto-item{
+        height: 170px;
+        width: 170px;
+    }
+    .motto-item i{
+        font-size: 50px;
+    }
+    .motto-item p{
+        font-size: 35px;
     }
 }
 
 /*----Tablets----*/
-@media (max-width:1000px) and (min-width:800px){
+@media (max-width:1000px) and (min-width:700px){
 
     header{
         background-position: 47% 0%;
     }
     #first-section{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
     }
     #main-text-wrapper{
         justify-self: flex-start;
@@ -469,6 +478,7 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     #main-text-wrapper>p{
         font-size: 27px;
         max-width: 550px;
+        margin-bottom: 150px;
     }
     @keyframes text{
         0%{
@@ -532,14 +542,14 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
 
 
 /*----Mobile Screens----*/
-@media (max-width:800px) and (min-width:350px){
+@media (max-width:700px) and (min-width:350px){
 
     header{
         background-position: 47% 0%;
     }
     #first-section{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-around;
     }
     #main-text-wrapper{
         justify-self: flex-start;
@@ -663,7 +673,7 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     }
     #first-section{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-around;
     }
     #main-text-wrapper{
         justify-self: flex-start;
@@ -756,3 +766,7 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
 
 
 }
+
+
+
+
