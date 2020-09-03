@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -17,58 +18,14 @@ header {
     width: 100%;
     height: 100vh;
     /*background-color: sandybrown;*/
-    background-image: url('media/background.jpg');
+    /*background-image: url('media/background.jpg');
     background-position: center;
     background-size: cover;
     /*opacity: 0.7;*/
 
 }
 
-/*---Nav Bar---*/
 
-nav {
-
-    top: 0;
-    display: flex;
-    background: white;
-    width: 100%;
-    height: 100px;
-    justify-content: space-between;
-    padding: 0 30px;
-    align-items: center;
-    box-sizing: border-box;
-    position: fixed;
-    opacity: 1.0;
-
-}
-
-#logo{
-
-    font-size: 25px;
-
-}
-
-nav div{
-    display: flex;
-    padding: 0 30px;
-}
-
-.menu-item, .primary{
-
-    color: black;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-
-}
-
-.primary{
-
-    background-color: cornflowerblue;
-    border-radius: 10px;
-    color: white;
-
-}
 
 /*----First Section----*/
 
@@ -76,22 +33,27 @@ nav div{
 
     width:100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197, 214, 247);
 
 }
 
 #main-text-wrapper{
 
-    width: 100%;;
-    height: 100%;
+    /*width: 100%;;
+    height: 100%;*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-
+    margin-top: 120px;
 }
 
 #main-text-wrapper>h1{
 
+    margin-top: 1000px;
     width:100%;
     max-width: 1100px;
     font-weight: 600;
@@ -99,24 +61,53 @@ nav div{
     letter-spacing: 7px;
     line-height: 1.2;
     text-align: center;
-    margin: 0;
+    margin-top: 20px;
     animation-name: text;
-    animation-duration: 3s;
+    animation-duration: 2s;
 
 }
 
-#main-text-wrapper p{
+#main-text-wrapper>p{
 
     animation-name: text-appear;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     width:100%;
-    max-width: 1200px;
-    font-size: 15px;
+    max-width: 400px;
+    font-size: 18px;
     text-align: center;
     padding-top: 20px;
     visibility: visible;
+    margin-bottom: 20px;
 
 }
+#first-sec-img{
+
+    width: 700px;
+    margin: 50px 20px 0px 0px;
+
+}
+#motto-wrapper{
+    display: flex;
+}
+.motto-item{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(133, 154, 196);
+    margin: 0px 5px;
+}
+.motto-item i{
+    font-size: 25px;
+    padding: 5px;
+}
+.motto-item p{
+    font-size: 20px;
+}
+
 
 @keyframes text{
 
@@ -126,7 +117,7 @@ nav div{
         
     } 35% {
         
-        letter-spacing: 15px;
+        letter-spacing: 12px;
         margin-bottom: -60px;
         
     } 80% {
@@ -348,24 +339,367 @@ nav div{
     padding: 10px;
 }
 
-@media (max-width:900px) {
+/*---Nav Bar---*/
+
+nav {
+
+    top: 0;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    opacity: 1.0;
+    z-index: 1;
+    padding: 25px;
+
+}
+#hamburger-menu{
+    display: none;
+    position: absolute;
+    top:2.2rem;
+    right:1.7rem;
+}
+
+.bar{
+
+    height: 4px;
+    width: 30px;
+    margin:2px;
+    background: black;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.2s;
+
+}
+
+.change #bar1{
+    transform: translateY(8px) rotateZ(-45deg);
+}
+.change #bar3{
+    transform: translateY(-8px) rotateZ(+45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+
+
+#logo{
+    font-size: 25px;
+    padding: 5px;
+}
+
+nav div{
+    display: flex;
+}
+
+.menu-item{
+    margin: 0px 2px;
+}
+
+.menu-item a {
+
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none; 
+    padding: 0 30px;
+
+}
+
+nav a:hover,
+section#second-section:hover ~ nav a[href="#second-section"],
+section#third-section:hover ~ nav a[href="#third-section"],
+section#fourth-section:hover ~ nav a[href="#fourth-section"]
+{
+
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    color: white;
+
+}
+@media(max-width:1024px) and (min-width:1000px){
+    #first-section{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #main-text-wrapper{
+        align-self: center;
+    }
+    #main-text-wrapper>h1{
+        font-size: 70px;
+    }
+    #main-text-wrapper>p{
+        font-size: 40px;
+        max-width: 700px;
+        margin-bottom: 200px;
+    }
+    #first-sec-img{
+        width: 650px;
+        margin: 50px;
+    }
+}
+
+/*----Tablets----*/
+@media (max-width:1000px) and (min-width:800px){
 
     header{
-        background-position: 47% 58%;
-        background-size: 240%;
+        background-position: 47% 0%;
     }
-    .menu-item, .primary{
-        display: none;
+    #first-section{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #main-text-wrapper{
+        justify-self: flex-start;
+    }
+    #first-sec-img{
+        width: 450px;
+        margin: 50px;
+    }
+
+    #main-text-wrapper>h1{
+        font-size: 35px;
+        letter-spacing: 4px;
+    } 
+    #main-text-wrapper>p{
+        font-size: 27px;
+        max-width: 550px;
+    }
+    @keyframes text{
+        0%{
+            color: black;
+            margin-bottom: -60px;
+        } 35% {
+            letter-spacing: 7px;
+            margin-bottom: -60px;
+        } 80% {
+            letter-spacing: 5x;
+            margin-bottom: -60px;
+        }
+    
+    }
+    #second-section{
+        width: 100%;
+        flex-direction: column;
+    }
+    .step-item{
+        width: 100%;
+    }
+    .step-item p{
+        font-size: 20px;
+    }
+
+    #item-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item{
+        width:90%; 
+        max-width: 700px;
+    }
+    .heading{
+        font-size: 55px;
+    }
+    .after-heading{
+        
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        text-align: center;
+        
+    }
+    .item>h3,.item>p{
+        padding: 10px;
+    }
+    #team-wrapper{
+        flex-direction: column;
+    }
+    .team-item{
+        width: 80%;
+    }
+    .team-item>p {
+        padding: 10px;
+    } 
+
+}
+
+
+
+/*----Mobile Screens----*/
+@media (max-width:800px) and (min-width:350px){
+
+    header{
+        background-position: 47% 0%;
+    }
+    #first-section{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #main-text-wrapper{
+        justify-self: flex-start;
+    }
+    #first-sec-img{
+        width: 350px;
+        margin: 50px;
+        margin-top: 10px;
+    }
+    #nav-links{
+        transition: all 1s;
+        display: none ; 
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
         padding: 0px;
-    }  
+       
+    }
+    #nav-links.change{
+        display: flex;
+        transition: all 1s;
+    }
+    #hamburger-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav .menu-item{
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+    }
+    nav .menu-item a{
+        padding: 10px;
+        width: 100%;
+        
+    }
     #main-text-wrapper>h1{
         font-size: 25px;
+        letter-spacing: 4px;
+        margin-top: 0px;
+    } 
+    #main-text-wrapper>p{
+        font-size: 13px;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .motto-item{
+        height: 70px;
+        width: 70px;
+    }
+    .motto-item i{
+        font-size: 20px;
+    }
+    .motto-item p{
+        font-size: 15px;
+    }
+    @keyframes text{
+        0%{
+            color: black;
+            margin-bottom: -60px;
+        } 35% {
+            letter-spacing: 7px;
+            margin-bottom: -60px;
+        } 80% {
+            letter-spacing: 5x;
+            margin-bottom: -60px;
+        }
+    
+    }
+    #second-section{
+        width: 100%;
+        flex-direction: column;
+    }
+    .step-item{
+        width: 100%;
+    }
+    #item-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item{
+        width:90%; 
+        max-width: 700px;
+    }
+    .heading{
+        font-size: 35px;
+    }
+    .after-heading{
+        
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        text-align: center;
+        
+    }
+    .item>h3,.item>p{
+        padding: 10px;
+    }
+    #team-wrapper{
+        flex-direction: column;
+    }
+    .team-item{
+        width: 80%;
+    }
+    .team-item>p {
+        padding: 10px;
+    } 
+
+}
+
+@media (max-width:350px) {
+
+    header{
+        background-position: 47% 0%;
+        
+    }
+    #first-section{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #main-text-wrapper{
+        justify-self: flex-start;
+    }
+    #first-sec-img{
+        width: 320px;
+        margin: 50px;
+        margin-top: 10px;
+    }
+    
+    #nav-links{
+        display: none;
+    }
+    #hamburger-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-text-wrapper>h1{
+        font-size: 20px;
         letter-spacing: 4px;
     } 
     #main-text-wrapper>p{
         font-size: 13px;
         max-width: 250px;
         margin-bottom: 30px;
+    }
+    .motto-item{
+        height: 65px;
+        width: 65px;
+    }
+    .motto-item i{
+        font-size: 20px;
+    }
+    .motto-item p{
+        font-size: 11px;
     }
     @keyframes text{
         0%{
@@ -420,6 +754,5 @@ nav div{
         padding: 10px;
     } 
 
+
 }
-
-
