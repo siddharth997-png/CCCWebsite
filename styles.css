@@ -1,0 +1,322 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+header {
+
+    width: 100%;
+    height: 100vh;
+    /*background-color: sandybrown;*/
+    background-image: url('media/background.jpg');
+    background-position: left;
+    background-size: cover;
+    /*opacity: 0.7;*/
+
+}
+
+/*---Nav Bar---*/
+
+nav {
+
+    top: 0;
+    display: flex;
+    background: white;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    opacity: 1.0;
+
+}
+
+#logo{
+
+    font-size: 25px;
+
+}
+
+nav div{
+    display: flex;
+    padding: 0 30px;
+}
+
+.menu-item, .primary{
+
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.primary{
+
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    color: white;
+
+}
+
+/*----First Section----*/
+
+#first-section{
+
+    width:100%;
+    height: 100vh;
+
+}
+
+#main-text-wrapper{
+
+    width: 100%;;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main-text-wrapper h1{
+
+    width:100%;
+    max-width: 1100px;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 7px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+
+}
+
+#main-text-wrapper p{
+
+    width:100%;
+    max-width: 1100px;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+/*----Second Section----*/
+
+#second-section{
+
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+
+}
+
+.step-item{
+
+    width: 25%;
+    text-align: center;
+    padding: 115px 20px;
+    color: white;
+
+}
+
+.step-item i{
+
+    font-size: 90px;
+    padding: 10px;
+    transition: all 0.3s;
+
+}
+
+.step-item:hover i{
+    transform: scale(1.2,1.2)
+}
+
+.step-item h3{
+
+    font-weight: 600;
+    font-size: 35px;
+
+}
+
+.step-item p{
+
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 1.6;
+    margin-top: 0;
+
+}
+
+#first-step {
+    background-color: #e4b476;
+}
+#second-step {
+    background-color: #5acda6;
+}
+#third-step {
+    background-color: #9ddaf6;
+}
+#fourth-step {
+    background-color: #91ac41;
+}
+
+/*-----Third Section-----*/
+
+#third-section{
+
+    width: 100%;
+    background: #f7eee2;
+    padding: 75px 0px;
+    text-align: center;
+
+}
+
+.before-heading {
+
+    font-size: 24px;
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    margin-top: 25px;
+
+}
+
+.heading {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.after-heading {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px;
+}
+
+#item-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.item{
+    width: 25%;
+    text-align: center;
+    padding: 25px;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    background-color: #e3b375;
+    border-radius: 50%;
+    padding: 40px;
+    color: white;
+    transition: all 0.3s;
+}
+.item:hover .icon-wrapper {
+    transform: scale(1.1, 1.1);
+}
+.icon-wrapper i {
+    font-size: 60px;
+}
+
+.item h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.item p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #8b8b99;
+}
+
+/*----Fourth Section----*/
+
+#fourth-section{
+
+    width: 100%;
+    text-align: center;
+    padding: 75px 0px;
+
+}
+
+#team-wrapper{
+
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.team-item{
+
+    width:25%;
+    text-align:center;
+    background-color: #f5f6fb;
+    padding: 30px;
+    border-radius: 30px;
+
+}
+.member-img{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.member-message {
+    font-size: 14px;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.member-item h3 {
+    font-size: 15px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+
+
+.member-designation {
+    color: #8b8b99;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+@media (max-width:900px) {
+
+    #second-section{
+        width: 100%;
+        flex-direction: column;
+    }
+    .step-item{
+        width: 100%;
+    }
+    #item-wrapper{
+        flex-direction: column;
+    }
+    .item{
+        width:90%; 
+        max-width: 700px;
+    }
+
+}
+
+
