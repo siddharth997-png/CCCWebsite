@@ -11,20 +11,32 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div id="logo">LOGO</div>
-            <div>
-                <div class="primary">Home</div>
-                <div class="menu-item">About</div>
-                <div class="menu-item">Contact Us</div>
-            </div>
-        </nav>
         <main>
             <section id="first-section">
                 <div id="main-text-wrapper">
                     <h1>CODECHEF CAMPUS CHAPTER VIIT</h1>
                     <p>Your own journey from zero to hero in competitive Programming</p>
+                    <div id="motto-wrapper">
+                        <div class="motto-item">
+                            <i class="fas fa-utensils"></i>
+                            <p>Eat</p>
+                        </div>
+                        <div class="motto-item">
+                            <i class="fas fa-bed"></i>
+                            <p>Sleep</p>
+                        </div>
+                        <div class="motto-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Code</p>
+                        </div>
+                        <div class="motto-item">
+                            <i class="fas fa-redo-alt"></i>
+                            <p>Repeat</p>
+                        </div>
+                        
+                    </div>
                 </div>
+                <img id="first-sec-img" src="media/undraw_programming_2svr.svg">
             </section>
             <section id="second-section">
                 <div class="step-item" id="first-step">
@@ -70,21 +82,63 @@
                     </div>
                 </div>
             </section>
-            <div id="fourth-section">
+            <section id="fourth-section">
                 <p class="before-heading">Who Are we?</p>
                 <h3 class="heading">Our Team</h3>
                 <p class="after-heading">Come Check Us Out!</p>
                 <div id="team-wrapper">
                     <div class="team-item">
                         <img class="member-img" src="media/IMG_20200814_114709.jpg" alt="">
-                        <p class="member-message">Third Year, Information Technology VIIT. Competitive Programmer, Web Development Enthuisast.
+                        <p class="member-message">Third Year, Information Texhnology VIIT. Competitive Programmer, Web Development Enthuisast.
                         </p>
                         <h3 class="member-name">Siddharth Kothari</h3>
                         <p class="designation">President</p>    
                     </div>
                 </div>
-            </div>
+            </section>
+            <nav>
+                <div id="logo">LOGO</div>
+                <div id="hamburger-menu" onclick="toggleChange()">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+                <div id="nav-links">
+                    <div class="menu-item"><a href="#second-section">Home</a></div>
+                    <div class="menu-item"><a href="#third-section">About</a></div>
+                    <div class="menu-item"><a href="#fourth-section">Our Team</a></div>
+                </div>
+                
+            </nav>
         </main>
+        
+        
+        
     </header>
+    <script type="text/javascript">
+        
+        function toggleChange() {
+
+            const navLink = document.getElementById('nav-links');
+            document.getElementById('hamburger-menu').classList.toggle('change');
+            navLink.classList.toggle('change');
+            // if(navLink.classList.contains('change')) {
+
+            //     navLink.style.display = "flex";
+            //     navLink.style.flexDirection = "column";
+            //     document.querySelector('nav').style.flexDirection = "column";
+
+            // } else {
+
+            //     navLink.style.display = "none";
+            //     document.querySelector('nav').style.flexDirection = "row";
+
+            // }
+            
+
+        }
+    
+    </script>
+    
 </body>
 </html>
