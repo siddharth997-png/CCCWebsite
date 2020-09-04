@@ -53,7 +53,6 @@ header {
 
 #main-text-wrapper>h1{
 
-    margin-top: 1000px;
     width:100%;
     max-width: 1100px;
     font-weight: 600;
@@ -143,6 +142,46 @@ header {
 
 }
 
+/*----Home Section----*/
+#home-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 159, 241);
+    padding: 50px;
+}
+.home-section-heading{
+    font-size:35px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 10px;
+    padding-top:20px;
+}
+
+.home-section-after-heading{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#home-section-container{
+    display: flex;
+}
+#home-section-container>img{
+    width: 40%;
+    padding: 40px;
+}
+#home-section-container-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.home-section-container-content{
+    padding: 10px;
+}
+
 /*----Second Section----*/
 
 #second-section{
@@ -224,10 +263,11 @@ header {
 }
 
 .heading {
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 600;
     margin: 0;
     margin-bottom: 8px;
+    letter-spacing: 3px;
 }
 
 .after-heading {
@@ -309,6 +349,33 @@ header {
     border-radius: 30px;
 
 }
+.team-item>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+.team-item div>i{
+    font-size: 20px;
+    padding: 5px;
+}
+.team-item div>i:nth-child(1){
+    color: rgb(255, 38, 0);
+}
+.team-item div>i:nth-child(2){
+    color: blue;
+}
+.team-item div>i:nth-child(3){
+    color: rgb(161, 161, 8);
+}
+.team-item div>i:nth-child(4){
+    color: purple;
+}
+.team-item div>i:nth-child(5){
+    color:#195e83;
+}
 .member-img{
     width: 200px;
     border-radius: 50%;
@@ -320,6 +387,7 @@ header {
     letter-spacing: 0.5px;
     font-style: italic;
     padding: 10px;
+    padding-bottom: 0px;
 }
 
 .member-item h3 {
@@ -350,19 +418,18 @@ nav {
     background-color: white;
     width: 100%;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 10px 30px;
     align-items: center;
     box-sizing: border-box;
     position: fixed;
     opacity: 1.0;
     z-index: 1;
-    padding: 25px;
 
 }
 #hamburger-menu{
     display: none;
     position: absolute;
-    top:2.2rem;
+    top:1.7rem;
     right:1.7rem;
     cursor: pointer;
 }
@@ -388,8 +455,8 @@ nav {
 .change #bar2{
     opacity: 0;
 }
-#logo{
-    font-size: 25px;
+#logo img{
+    width: 45px;
     padding: 5px;
 }
 
@@ -413,9 +480,11 @@ nav div{
 }
 
 nav a:hover,
-section#second-section:hover ~ nav a[href="#second-section"],
+section#home-section:hover ~ nav a[href="#home-section"],
+section#second-section:hover ~ nav a[href="#home-section"],
 section#third-section:hover ~ nav a[href="#third-section"],
-section#fourth-section:hover ~ nav a[href="#fourth-section"]
+section#fourth-section:hover ~ nav a[href="#fourth-section"],
+section#contact-us-section:hover ~ nav a[href="#contact-us-section"]
 {
 
     background-color: cornflowerblue;
@@ -442,6 +511,76 @@ footer p{
 
 footer p i{
     color: rgb(255, 0, 0);
+}
+
+/*-----Contact Us-----*/
+#contact-us-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(182, 209, 138);
+}
+#contact-us-heading{
+    font-size: 44px;
+    padding-top:30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+#contact-us-after-heading{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    padding: 10px
+}
+#contact-us-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#contact-us-wrapper>img{
+    width: 40%;
+    padding: 20px;
+}
+#social-media{
+    width:20%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-template-rows: 140px 140px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+#social-media>a{
+    height: 100%;
+    width:100%;
+    text-decoration:none;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #4b9c68;
+    transition: all .3s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#social-media a p{
+    margin-bottom: -10px;
+    margin-top:10px
+}
+#social-media a i{
+    font-size: 40px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#social-media>a:hover{
+    transform: scale(1.1,1.1);
 }
 
 
@@ -587,14 +726,14 @@ footer p i{
         margin-top: 10px;
     }
     #nav-links{
-        display: none ; 
+        display: none; 
         flex-direction: column;
         width: 100%;
         align-items: center;
         padding: 0px;
        
     }
-    #nav-links .change{
+    #nav-links.change{
         display: flex;
     }
     #hamburger-menu{
@@ -648,6 +787,21 @@ footer p i{
         }
     
     }
+    .home-section-heading{
+        font-size: 29px;
+    }
+    #home-section-container{
+        flex-direction: column;
+        padding-top: 15px;
+
+    }
+    #home-section-container>img{
+        padding-top: 15px;
+        width:300px;
+    }
+    #home-section-container-content-wrapper{
+        padding: 5px;
+    }
     #second-section{
         width: 100%;
         flex-direction: column;
@@ -691,6 +845,26 @@ footer p i{
         font-size: 15px;
         padding: 15px;
     }
+    #contact-us-wrapper{
+        flex-direction: column;
+    }
+    #social-media{
+        grid-template-columns: 90px 90px;
+        grid-template-rows: 90px 90px;
+    }
+    #social-media a p{
+        margin-bottom: -5px;
+        margin-top:5px;
+        font-size: 12px;
+    }
+    #social-media a i{
+        font-size: 24px;
+        
+    }
+    #contact-us-wrapper>img{
+        width: 300px;
+    }
+    
 
 }
 /*----Very small devices----*/
@@ -774,6 +948,21 @@ footer p i{
         }
     
     }
+    .home-section-heading{
+        font-size: 25px;
+    }
+    #home-section-container{
+        flex-direction: column;
+        padding-top: 12px;
+
+    }
+    #home-section-container>img{
+        padding-top: 12px;
+        width:275px;
+    }
+    #home-section-container-content-wrapper{
+        padding: 5px;
+    }
     #second-section{
         width: 100%;
         flex-direction: column;
@@ -816,6 +1005,25 @@ footer p i{
     footer p{
         font-size: 14px;
         padding: 14px;
+    }
+    #contact-us-wrapper{
+        flex-direction: column;
+    }
+    #social-media{
+        grid-template-columns: 80px 80px;
+        grid-template-rows: 80px 80px;
+    }
+    #social-media a p{
+        margin-bottom: -5px;
+        margin-top:5px;
+        font-size: 10px;
+    }
+    #social-media a i{
+        font-size: 20px;
+        
+    }
+    #contact-us-wrapper>img{
+        width: 250px;
     }
 
 }
