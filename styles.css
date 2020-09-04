@@ -339,6 +339,8 @@ header {
     padding: 10px;
 }
 
+/*----Fourth Section End----*/
+
 /*---Nav Bar---*/
 
 nav {
@@ -362,6 +364,7 @@ nav {
     position: absolute;
     top:2.2rem;
     right:1.7rem;
+    cursor: pointer;
 }
 
 .bar{
@@ -385,8 +388,6 @@ nav {
 .change #bar2{
     opacity: 0;
 }
-
-
 #logo{
     font-size: 25px;
     padding: 5px;
@@ -422,6 +423,30 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     color: white;
 
 }
+
+/*----Navbar End----*/
+
+/*-----Footer----*/
+
+footer{
+    width: 100%;
+    text-align: center;
+    background: black;
+}
+footer p{
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+
+footer p i{
+    color: rgb(255, 0, 0);
+}
+
+
+/*---- Large Tablets----*/
+
 @media(max-width:1283px) and (min-width:1000px){
     #first-section{
         flex-direction: column;
@@ -452,6 +477,8 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
         font-size: 35px;
     }
 }
+
+
 
 /*----Tablets----*/
 @media (max-width:1000px) and (min-width:700px){
@@ -560,7 +587,6 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
         margin-top: 10px;
     }
     #nav-links{
-        transition: all 1s;
         display: none ; 
         flex-direction: column;
         width: 100%;
@@ -568,9 +594,8 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
         padding: 0px;
        
     }
-    #nav-links.change{
+    #nav-links .change{
         display: flex;
-        transition: all 1s;
     }
     #hamburger-menu{
         display: flex;
@@ -662,9 +687,13 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     .team-item>p {
         padding: 10px;
     } 
+    footer p{
+        font-size: 15px;
+        padding: 15px;
+    }
 
 }
-
+/*----Very small devices----*/
 @media (max-width:350px) {
 
     header{
@@ -685,13 +714,34 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     }
     
     #nav-links{
-        display: none;
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 0px;
+       
+    }
+    #nav-links.change{
+        display: flex;
     }
     #hamburger-menu{
         display: flex;
         flex-direction: column;
     }
-
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav .menu-item{
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+    }
+    nav .menu-item a{
+        padding: 10px;
+        width: 100%;
+        
+    }
     #main-text-wrapper>h1{
         font-size: 20px;
         letter-spacing: 4px;
@@ -763,7 +813,10 @@ section#fourth-section:hover ~ nav a[href="#fourth-section"]
     .team-item>p {
         padding: 10px;
     } 
-
+    footer p{
+        font-size: 14px;
+        padding: 14px;
+    }
 
 }
 
