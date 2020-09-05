@@ -358,23 +358,23 @@ header {
     padding: 5px;
 
 }
-.team-item div>i{
+.team-item div i{
     font-size: 20px;
     padding: 5px;
 }
-.team-item div>i:nth-child(1){
+.team-item div i:nth-child(1){
     color: rgb(255, 38, 0);
 }
-.team-item div>i:nth-child(2){
+.team-item div i:nth-child(2){
     color: blue;
 }
-.team-item div>i:nth-child(3){
+.team-item div i:nth-child(3){
     color: rgb(161, 161, 8);
 }
-.team-item div>i:nth-child(4){
+.team-item div i:nth-child(4){
     color: purple;
 }
-.team-item div>i:nth-child(5){
+.team-item div i:nth-child(5){
     color:#195e83;
 }
 .member-img{
