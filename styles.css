@@ -62,6 +62,10 @@ header {
 
 }
 
+#main-text-wrapper img {
+    width : 120%;
+}
+
 #main-text-wrapper>p{
 
     animation-name: text-appear;
@@ -463,8 +467,8 @@ nav {
     opacity: 0;
 }
 #logo img{
-    width: 45px;
-    padding: 5px;
+    width: 75px;
+    padding: 0px;
 }
 
 nav div{
